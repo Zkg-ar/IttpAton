@@ -44,7 +44,7 @@ public class controller {
     }
 
     @DeleteMapping("/user")
-    public void deleteUserById(@PathParam("id") long id) {
-        storage.deleteUserById(id);
+    public void deleteUserById(@PathParam("account") long account) {
+        storage.deleteUserById(account);
     }
 }

@@ -45,7 +45,7 @@ public class InMemorySimpleDb {
     public User getUserByName(String name) {
         return memory.values()
                 .stream()
-                .filter(x -> x.getName() == name)
+                .filter(x -> x.getName().equals(name))
                 .findFirst()
                 .orElseThrow(() -> new UserNotFoundException("Пользователь с таким именем не существует"));
     }
